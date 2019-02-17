@@ -1,0 +1,20 @@
+/* 变量 */
+
+/* 混合器 */
+@mixin thc($re) {
+  height: $re;
+  line: {
+    height: $re;
+  }
+}
+
+@mixin toh(){
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin mp($v){
+  padding-top: $v;
+  margin-top: -$v;
+}
