@@ -42,5 +42,9 @@ $p-color:rgb(104, 103, 103);
     text-indent: .81rem;
     letter-spacing: 2px;
     color: $p-color;
+    span {
+      color: $tit-color;
+      letter-spacing: 0;
+    }
   }
 }

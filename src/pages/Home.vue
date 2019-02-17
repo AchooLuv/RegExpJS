@@ -5,7 +5,7 @@
       <p>
         正则表达式是一门功能极其强大的文本处理语言，现在几乎被所有的高级语言所支持。本教程是网站作者在学习
         <a href="https://www.amazon.cn/mn/detailApp/ref=asc_df_05965281242949480/?asin=0596528124&tag=douban-23&creative=2384&creativeASIN=0596528124&linkCode=df0" target="_blank">《精通正则表达式 第三版》</a>
-        一书后，总结的一些学习感悟与收获！教程将会以JavaScript为载体，由浅入深的讲解正则表达式的匹配原理、使用方法以及如何编写高效正则表达式。
+        一书后，总结的一些学习感悟与收获！教程将会以<span>JavaScript</span>为载体，由浅入深的讲解正则表达式的匹配原理、使用方法以及如何编写高效正则表达式。
       </p>
       <div class="tools">正则学习工具推荐：</div>
       <a class="iconfont tool animated zoomInLeft" v-for="ts in tools" :key="ts.id" :href="ts.url">
