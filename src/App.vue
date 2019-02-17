@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav></Nav>
-    <router-view/>
+    <router-view class="docs"/>
     <keep-alive>
       <Top></Top>
     </keep-alive>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Nav from '@/pages/common/Nav'
-import Top from '@/pages/common/Top'
+import Nav from 'sp/common/Nav'
+import Top from 'sp/common/Top'
 export default {
   name: 'App',
   components: {
@@ -20,13 +20,18 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import 'sa/styles/var.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: -webkit-flex;
+  display: flex;
+  .docs {
+    flex:1;
+    margin-top: 1rem;
+    margin-left: $nav-width;
+  }
 }
 </style>

@@ -1,14 +1,13 @@
 <template>
-  <div class='docs'>
-    文档内容
-  </div>
+  <div>高效正则页面</div>
 </template>
 
 <script>
 export default {
-  name: 'Docs'
+  name: 'Er'
 }
 </script>
 
 <style lang='scss' scoped>
+
 </style>

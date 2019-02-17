@@ -1,6 +1,15 @@
 /* 变量 */
-
+$nav-width: 7rem;
+$nav-color: rgb(95, 95, 94);
+$rv-width: 80%;
+$tit-color:rgb(53, 52, 52);
+$p-color:rgb(104, 103, 103);
 /* 混合器 */
+@mixin mp($v) {
+  padding-top: $v;
+  margin-top: -$v;
+}
+
 @mixin thc($re) {
   height: $re;
   line: {
@@ -8,13 +17,30 @@
   }
 }
 
-@mixin toh(){
-  white-space: nowrap;
+@mixin pa($t,$l) {
+  transform: translate($t,$l);
+}
+
+@mixin toh() {
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-@mixin mp($v){
-  padding-top: $v;
-  margin-top: -$v;
+@mixin h1p() {
+  h1 {
+    font-size: .5rem;
+    font-weight: 100;
+    text-align: center;
+    padding: 0 0 .8rem 0;
+    color: $tit-color;
+    letter-spacing: 4px;
+  }
+  p {
+    font-size: .35rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-indent: .81rem;
+    letter-spacing: 2px;
+    color: $p-color;
+  }
 }
