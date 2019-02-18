@@ -6,9 +6,9 @@
         <router-link :to='nav.path' v-html='nav.name'></router-link>
         <ul class="iconfont nav-l2" v-show="nav.ul">
           <li v-for="li in nav.ul" :key="li.id">
-            <router-link :to='"#" + li.path'
+            <a :href='li.anchor'
             v-html='"<span style=\"font-size:.3rem;color:rgb(0, 159, 23)\">&#xe64a;</span>" + li.name'>
-            </router-link>
+            </a>
           </li>
         </ul>
       </li>
@@ -34,29 +34,29 @@ export default {
         name: '元字符',
         path: '/mc',
         ul: [{
-          id: 11,
+          id: 1,
           name: '计数功能型',
-          anchor: ''
+          anchor: '#counter'
         }, {
-          id: 12,
+          id: 2,
           name: '匹配位置型',
-          anchor: ''
+          anchor: '#location'
         }, {
-          id: 13,
+          id: 3,
           name: '匹配单个字符型',
-          anchor: ''
+          anchor: '#single'
         }, {
-          id: 14,
+          id: 4,
           name: '进阶型元字符',
-          anchor: ''
+          anchor: '#advance'
         }, {
-          id: 15,
+          id: 5,
           name: '其他类型',
-          anchor: ''
+          anchor: '#other'
         }, {
-          id: 16,
+          id: 6,
           name: '运算优先级',
-          anchor: ''
+          anchor: '#priority'
         }]
       }, {
         id: 2,
