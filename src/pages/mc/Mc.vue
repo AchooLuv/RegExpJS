@@ -1,39 +1,37 @@
 <template>
-  <div>
-    <div class="mc-con">
-        <h1>元字符</h1>
-        <p>
-          该部分内容会先集中介绍元字符本身及其作用，在稍后的内容中出现的正则表达式都将使用<span>JavaScript</span>作为载体来详细的讲解如何使用这些元字符,以及一些需要注意的地方（比如它们之间的运算优先级关系）;
-          下面涉及到的<span>JavaScript RegExp</span>方法有不清楚的可查阅以下对应的资料:
-        </p>
-        <div class="infos">
-          <a target="_blank" v-for="info in infos" :key="info.id" :href="info.url" v-html="info.name"></a>
+  <div class="mc-con">
+      <h1>元字符</h1>
+      <p>
+        该部分内容会先集中介绍元字符本身及其作用，在稍后的内容中出现的正则表达式都将使用<span>JavaScript</span>作为载体来详细的讲解如何使用这些元字符,以及一些需要注意的地方（比如它们之间的运算优先级关系）;
+        下面涉及到的<span>JavaScript RegExp</span>方法有不清楚的可查阅以下对应的资料:
+      </p>
+      <div class="infos">
+        <a target="_blank" v-for="info in infos" :key="info.id" :href="info.url" v-html="info.name"></a>
+      </div>
+      <div class="mcc-con" v-for="mc in mcs" :key="mc.id" :id="mc.anchor">
+        <h2 v-html="mc.tit"></h2>
+        <table v-for="th in mc.tables" :key="th.id">
+          <thead>
+            <tr>
+              <th v-for="td in th.thead" :key="td.id" v-html="td.th"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="tb in th.tbody" :key="tb.id">
+              <td v-for="tr in tb.tr" :key="tr.id" v-html="tr.td"></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="divp" v-if="mc.labels">
+          <p v-for="lb in mc.labels" :key="lb.id" v-html="lb.con"></p>
         </div>
-        <div class="animated mcc-con" v-for="mc in mcs" :key="mc.id" :id="mc.anchor">
-          <h2 v-html="mc.tit"></h2>
-          <table v-for="th in mc.tables" :key="th.id">
-            <thead>
-              <tr>
-                <th v-for="td in th.thead" :key="td.id" v-html="td.th"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="tb in th.tbody" :key="tb.id">
-                <td v-for="tr in tb.tr" :key="tr.id" v-html="tr.td"></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="divp" v-if="mc.labels">
-            <p v-for="lb in mc.labels" :key="lb.id" v-html="lb.con"></p>
-          </div>
-          <div class="code" v-for="pre in mc.codes" :key="pre.id">
-            <h3 class="tit" v-html="pre.tit"></h3>
-            <pre v-highlightjs>
-              <code class="javascript" v-html="pre.code"></code>
-            </pre>
-          </div>
+        <div class="code" v-for="pre in mc.codes" :key="pre.id">
+          <h3 class="tit" v-html="pre.tit"></h3>
+          <pre v-highlightjs>
+            <code class="javascript" v-html="pre.code"></code>
+          </pre>
         </div>
-    </div>
+      </div>
   </div>
 </template>
 
@@ -858,11 +856,13 @@ export default {
 <style lang='scss' scoped>
 @import 'sa/styles/var.scss';
 .mc-con {
-  position: relative;
-  z-index: 5;
   width: 60%;
-  margin-left: 10%;
+  margin: 1rem 0 0 8rem;
   @include h1p;
+  @media (max-width: 1024px) {
+    width: $docs-width;
+    margin-left: 5%;
+  }
   .infos {
     display: -webkit-flex;
     display: flex;
@@ -870,7 +870,7 @@ export default {
     margin: .2rem 0;
     border-radius: .1rem;
     overflow: hidden;
-    background: rgb(63, 196, 178);
+    background: $nav-colors;
     a {
       flex: 0 0 20%;
       box-sizing: border-box;
@@ -882,7 +882,6 @@ export default {
     }
   }
   .mcc-con {
-    @include mp(.001rem);
     h2 {
       font-size: .4rem;
       font-weight: 100;
@@ -892,15 +891,15 @@ export default {
     table {
       width: 100%;
       font-size: .31rem;
-      border: 1px solid $p-color;
+      border: 1px solid $txt-color;
       border-collapse: collapse;
       letter-spacing: 2px;
       margin-bottom: .2rem;
       thead tr th,tbody tr td {
-        border: 1px solid $p-color;
+        border: 1px solid $txt-color;
         padding: .2rem .3rem;
         text-align: center;
-        color: $p-color;
+        color: $txt-color;
       }
     }
     .divp {
@@ -915,6 +914,7 @@ export default {
     .code {
       pre {
         line-height: .2rem;
+        letter-spacing: 1px;
       }
       .tit {
         font-size: .35rem;

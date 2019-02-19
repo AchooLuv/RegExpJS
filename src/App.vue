@@ -26,12 +26,5 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: -webkit-flex;
-  display: flex;
-  .docs {
-    flex:1;
-    margin-top: 1rem;
-    margin-left: $nav-width;
-  }
 }
 </style>

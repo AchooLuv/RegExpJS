@@ -54,17 +54,18 @@ export default {
 </script>
 
  <style lang='scss' scoped>
+ @import 'sa/styles/var.scss';
 .top {
   z-index: 5;
   position: fixed;
   right: 1rem;
   bottom: 1rem;
   font-size: 1rem;
-  color: #1296db;
+  color: $nav-colors;
   cursor: pointer;
-  @media (max-width: 1124px) {
+  @media (max-width: 1280px) {
     right: .6rem;
-    bottom: 2rem;
+    bottom: 1rem;
     font-size: .85rem
   }
   @media (max-width: 414px) {

@@ -1,9 +1,9 @@
 /* 变量 */
 $nav-width: 7rem;
 $nav-color: rgb(95, 95, 94);
-$rv-width: 80%;
-$tit-color:rgb(53, 52, 52);
-$p-color:rgb(104, 103, 103);
+$nav-colors: rgb(63, 196, 178);
+$docs-width:  90%;
+$txt-color:rgb(104, 103, 103);
 /* 混合器 */
 @mixin mp($v) {
   padding-top: $v;
@@ -21,18 +21,13 @@ $p-color:rgb(104, 103, 103);
   transform: translate($t,$l);
 }
 
-@mixin toh() {
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 @mixin h1p() {
   h1 {
     font-size: .5rem;
     font-weight: 100;
     text-align: center;
     padding: 0 0 .8rem 0;
-    color: $tit-color;
+    color: $txt-color;
     letter-spacing: 4px;
   }
   p {
@@ -41,10 +36,60 @@ $p-color:rgb(104, 103, 103);
     line-height: 1.5;
     text-indent: .81rem;
     letter-spacing: 2px;
-    color: $p-color;
+    color: $txt-color;
     span {
-      color: $tit-color;
+      color: $txt-color;
       letter-spacing: 0;
+    }
+  }
+}
+
+@mixin nav($w){
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $w;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-right: .2rem solid rgb(189, 189, 189);
+  .home {
+    display: block;
+    @include thc(1rem);
+    font-size: .5rem;
+    text-align: center;
+    color: rgb(0, 197, 211);
+    border-bottom: 1px solid rgb(231, 227, 202);
+  }
+  .nav-l1 {
+    margin: .5rem 0 0 .5rem;
+    li {
+      margin: .3rem 0;
+      a {
+        display: block;
+        font-size: .35rem;
+        color: $nav-color;
+        letter-spacing: 2px;
+      }
+      .nav-l2 {
+        margin: 0 0 0 .5rem;
+        li {
+          a {
+            z-index: 15;
+            font-size: .32rem;
+          }
+        }
+      }
+    }
+  }
+  .info {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: .5rem;
+    p {
+      @include thc(.5rem);
+      color:rgb(95, 123, 126);
     }
   }
 }
