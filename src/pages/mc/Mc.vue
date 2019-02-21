@@ -695,7 +695,7 @@ export default {
     console.log(RegExp.$2);    // 输出结果为: Luv`
         }, {
           id: 40403,
-          tit: '元字符<span style="color:red">  ( ) </span>实例:',
+          tit: '元字符<span style="color:red">  (?: ) </span>实例:',
           code: `    //本实例使用的JS正则语法声明 var regexp = /pattern/flags;                 
     
     var text = 'Design by AchooLuv',
