@@ -24,6 +24,7 @@ export default new Router({
     }, {
       path: '/mc',
       name: 'Mc',
+      redirect: '/mc/counter',
       component: Mc,
       children: [
         {

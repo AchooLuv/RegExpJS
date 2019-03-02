@@ -1,5 +1,5 @@
 <template>
-  <div>匹配原理页面</div>
+  <div></div>
 </template>
 
 <script>

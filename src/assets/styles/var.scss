@@ -111,6 +111,7 @@ $txt-color:rgb(104, 103, 103);
     thead tr th,tbody tr td {
       border: 1px solid $txt-color;
       padding: .2rem .3rem;
+      line-height: 1.5;
       text-align: center;
       color: $txt-color;
     }

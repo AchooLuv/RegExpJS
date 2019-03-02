@@ -1,5 +1,5 @@
 <template>
-  <div>高效正则页面</div>
+  <div></div>
 </template>
 
 <script>

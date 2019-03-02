@@ -1,5 +1,5 @@
 <template>
-  <div>实用技巧页面</div>
+  <div></div>
 </template>
 
 <script>
