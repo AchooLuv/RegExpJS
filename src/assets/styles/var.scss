@@ -93,3 +93,54 @@ $txt-color:rgb(104, 103, 103);
     }
   }
 }
+
+@mixin con {
+  h2 {
+    font-size: .4rem;
+    font-weight: 100;
+    color: rgb(219, 135, 9);
+    margin: .6rem 0 .3rem 0;
+  }
+  table {
+    width: 100%;
+    font-size: .31rem;
+    border: 1px solid $txt-color;
+    border-collapse: collapse;
+    letter-spacing: 2px;
+    margin-bottom: .2rem;
+    thead tr th,tbody tr td {
+      border: 1px solid $txt-color;
+      padding: .2rem .3rem;
+      text-align: center;
+      color: $txt-color;
+    }
+  }
+  .divp {
+    margin-bottom: .6rem;
+    p {
+      font-size: .35rem;
+      font-weight: 100;
+      line-height: 1.5;
+      text-indent: 0.77rem;
+      letter-spacing: 2px;
+      color:rgb(78, 120, 124);
+      &:nth-of-type(1) {
+        text-indent: 0;
+      }
+    }
+  }
+  .code {
+    pre {
+      line-height: .2rem;
+      letter-spacing: 1px;
+    }
+    .tit {
+      font-size: .35rem;
+      font-weight: 100; 
+      color: rgb(0, 212, 71);
+    }
+    &:nth-of-type(1) {
+      margin-top: .5rem;
+    }
+  }
+}

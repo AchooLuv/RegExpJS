@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="iconfont nav-pc">
-      <router-link class="home" to='./'>RegExpJS</router-link>
+      <router-link class="home" to='/'>RegExpJS</router-link>
       <ul class="nav-l1">
         <li v-for="nav in navs" :key="nav.id">
           <router-link :to='nav.path' v-html='nav.name'></router-link>
@@ -26,7 +26,7 @@
     <div class="iconfont homeIcon" @click="show = !show">&#xe600;</div>
     <transition name="navs" enter-active-class="animated slideInLeft" leave-active-class="animated slideOutLeft">
       <nav class="iconfont nav-mobile" v-if="show" @click="show = !show">
-        <router-link class="home" to='./'>RegExpJS</router-link>
+        <router-link class="home" to='/'>RegExpJS</router-link>
         <ul class="nav-l1">
           <li v-for="nav in navs" :key="nav.id">
             <router-link :to='nav.path' v-html='nav.name'></router-link>
@@ -65,27 +65,27 @@ export default {
         ul: [{
           id: 1,
           name: '计数功能型',
-          anchor: '#counter'
+          anchor: '/mc/counter'
         }, {
           id: 2,
           name: '匹配位置型',
-          anchor: '#location'
+          anchor: '/mc/location'
         }, {
           id: 3,
           name: '匹配单个字符型',
-          anchor: '#single'
+          anchor: '/mc/single'
         }, {
           id: 4,
           name: '进阶型元字符',
-          anchor: '#advance'
+          anchor: '/mc/advance'
         }, {
           id: 5,
           name: '其他类型',
-          anchor: '#other'
+          anchor: '/mc/other'
         }, {
           id: 6,
           name: '运算优先级',
-          anchor: '#priority'
+          anchor: '/mc/priority'
         }]
       }, {
         id: 2,
