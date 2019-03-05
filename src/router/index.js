@@ -14,56 +14,67 @@ import Er from 'sp/er/Er'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
       path: '/',
       name: 'Home',
+      meta: {title: 'RegExpJS - Crafted by AchooLuv'},
       component: Home
     }, {
       path: '/mc',
       name: 'Mc',
       redirect: '/mc/counter',
+      meta: {title: '元字符 - RegExpJS - Crafted by AchooLuv'},
       component: Mc,
       children: [
         {
           path: 'counter',
           name: 'Counter',
+          meta: {title: '计数功能型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
           component: Counter
         }, {
           path: 'location',
           name: 'Location',
+          meta: {title: '匹配位置型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
           component: Location
         }, {
           path: 'single',
           name: 'Single',
+          meta: {title: '匹配单个字符型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
           component: Single
         }, {
           path: 'advance',
           name: 'Advance',
+          meta: {title: '进阶型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
           component: Advance
         }, {
           path: 'other',
           name: 'Other',
+          meta: {title: '匹其他类型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
           component: Other
         }, {
           path: 'priority',
           name: 'Priority',
+          meta: {title: '元字符运算优先级 - 元字符 - RegExpJS - Crafted by AchooLuv'},
           component: Priority
         }
       ]
     }, {
       path: '/mp',
       name: 'Mp',
+      meta: {title: '匹配原理 - RegExpJS - Crafted by AchooLuv'},
       component: Mp
     }, {
       path: '/ps',
       name: 'Ps',
+      meta: {title: '实用技巧 - RegExpJS - Crafted by AchooLuv'},
       component: Ps
     }, {
       path: '/er',
       name: 'Er',
+      meta: {title: '高效正则 - RegExpJS - Crafted by AchooLuv'},
       component: Er
     }
   ],
@@ -71,3 +82,12 @@ export default new Router({
     return {x: 0, y: 0}
   }
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
+})
+
+export default router
