@@ -20,7 +20,7 @@
           <a href='https://github.com/AchooLuv' target="_blank">AchooLuv</a>
           with heart.
         </p>
-        <p>互联网备案号: 蜀ICP备18019865号-1</p>
+        <p>互联网备案号: 蜀ICP备18019865号</p>
       </div>
     </nav>
     <div class="iconfont homeIcon" @click="show = !show">&#xe600;</div>
@@ -44,7 +44,7 @@
             Crafted by
             <a href='https://github.com/AchooLuv' target="_blank">AchooLuv</a>
           </p>
-          <p>备案号: 蜀ICP备18019865号-1</p>
+          <p>备案号: 蜀ICP备18019865号</p>
         </div>
       </nav>
     </transition>
@@ -93,12 +93,12 @@ export default {
         path: '/mp'
       }, {
         id: 3,
-        name: '实用技巧',
-        path: '/ps'
-      }, {
-        id: 4,
         name: '高效正则',
         path: '/er'
+      }, {
+        id: 4,
+        name: '社区讨论',
+        path: ''
       }]
     }
   }

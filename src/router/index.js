@@ -9,7 +9,6 @@ import Advance from 'sp/mc/advance/Advance'
 import Other from 'sp/mc/other/Other'
 import Priority from 'sp/mc/priority/Priority'
 import Mp from 'sp/mp/Mp'
-import Ps from 'sp/ps/Ps'
 import Er from 'sp/er/Er'
 
 Vue.use(Router)
@@ -66,11 +65,6 @@ const router = new Router({
       name: 'Mp',
       meta: {title: '匹配原理 - RegExpJS - Crafted by AchooLuv'},
       component: Mp
-    }, {
-      path: '/ps',
-      name: 'Ps',
-      meta: {title: '实用技巧 - RegExpJS - Crafted by AchooLuv'},
-      component: Ps
     }, {
       path: '/er',
       name: 'Er',
