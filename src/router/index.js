@@ -10,6 +10,10 @@ import Other from 'sp/mc/other/Other'
 import Priority from 'sp/mc/priority/Priority'
 import Mp from 'sp/mp/Mp'
 import Er from 'sp/er/Er'
+import Application from 'sp/er/application/Application'
+import Transmission from 'sp/er/transmission/Transmission'
+import Itself from 'sp/er/itself/Itself'
+import Faster from 'sp/er/faster/Faster'
 
 Vue.use(Router)
 
@@ -68,8 +72,30 @@ const router = new Router({
     }, {
       path: '/er',
       name: 'Er',
+      redirect: '/er/application',
       meta: {title: '高效正则 - RegExpJS - Crafted by AchooLuv'},
-      component: Er
+      component: Er,
+      children: [{
+        path: 'application',
+        name: 'Application',
+        meta: {title: '正则应用原理 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Application
+      }, {
+        path: 'transmission',
+        name: 'Transmission',
+        meta: {title: '传动装置优化 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Transmission
+      }, {
+        path: 'itself',
+        name: 'Itself',
+        meta: {title: '表达式本身优化 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Itself
+      }, {
+        path: 'faster',
+        name: 'Faster',
+        meta: {title: '提高表达式速度 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Faster
+      }]
     }
   ],
   scrollBehavior (to, from, savedPosition) {

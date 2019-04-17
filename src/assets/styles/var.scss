@@ -145,3 +145,50 @@ $txt-color:rgb(104, 103, 103);
     }
   }
 }
+@mixin tip {
+  @include con;
+  @include h1p;
+  ul {
+    li{
+      color: rgb(201, 204, 0);
+      font-size: 0.32rem;
+      list-style: circle;
+    }
+  }
+  h2 {
+    font-size: .4rem;
+    font-weight: 100;
+    color: rgb(219, 135, 9);
+    margin: .6rem 0 .3rem 0;
+  }
+  h3 {
+    font-size:.34rem;
+    line-height: 1.5;
+    text-indent: .81rem;
+    letter-spacing: 1px;
+    color: rgb(248, 149, 0);
+    margin-top: .2rem;
+    cursor: pointer;
+    span.jh{
+      font-size:.3rem;
+      color:rgb(0, 159, 23);
+      padding-right: .1rem;
+    }
+  }
+  pre {
+    letter-spacing: 1px;
+    margin: -.35rem 0 -.8rem 0;
+  }
+  span.ins{
+    font-size: 0.3rem;
+    letter-spacing: 1px;
+  }
+  span.reg{
+    padding: 0 .1rem;
+    border-radius: .05rem;
+    color: rgb(87, 238, 94);
+    background: rgb(130, 138, 127);
+    letter-spacing: 1px;
+    overflow: hidden;
+  }
+}

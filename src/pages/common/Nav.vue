@@ -94,7 +94,24 @@ export default {
       }, {
         id: 3,
         name: '高效正则',
-        path: '/er'
+        path: '/er',
+        ul: [{
+          id: 1,
+          name: '正则应用原理',
+          anchor: '/er/application'
+        }, {
+          id: 2,
+          name: '传动装置优化',
+          anchor: '/er/transmission'
+        }, {
+          id: 3,
+          name: '表达式本身优化',
+          anchor: '/er/itself'
+        }, {
+          id: 4,
+          name: '提高表达式速度',
+          anchor: '/er/faster'
+        }]
       }, {
         id: 4,
         name: '社区讨论',
