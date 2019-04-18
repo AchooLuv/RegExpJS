@@ -181,13 +181,14 @@ $txt-color:rgb(104, 103, 103);
   }
   span.ins{
     font-size: 0.3rem;
+    color: rgb(136, 141, 124);
     letter-spacing: 1px;
   }
   span.reg{
     padding: 0 .1rem;
     border-radius: .05rem;
-    color: rgb(87, 238, 94);
-    background: rgb(130, 138, 127);
+    color: rgb(0, 243, 170);
+    background: rgb(77, 75, 75);
     letter-spacing: 1px;
     overflow: hidden;
   }

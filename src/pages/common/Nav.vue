@@ -111,6 +111,10 @@ export default {
           id: 4,
           name: '提高表达式速度',
           anchor: '/er/faster'
+        }, {
+          id: 5,
+          name: '消除表达式循环',
+          anchor: '/er/loop'
         }]
       }, {
         id: 4,

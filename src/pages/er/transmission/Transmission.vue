@@ -16,7 +16,8 @@
     <h3><span class="iconfont jh">&#xe64a;</span>隐式锚点优化</h3>
     <p><span class="ins">若正则表达式以<span class="reg">.*</span>或<span class="reg">.+</span>开头，并且没有全局性多选结构，则认为此正则表达式在开头有一个看不见的<span class="reg">^</span>。即使开头的<span class="reg">.*</span>或<span class="reg">.+</span>在括号内，也可以进行同样的优化，但是在遇见捕获型括号时情况就有了变化。比如下例中，期望字符串<span class="reg">X</span>两侧是相同的：</span></p>
     <pre v-highlightjs>
-      <code class="javascript">      /(.+)X\1/.test('123X234')    // 返回True</code>
+      <code class="javascript">      /(.+)X\1/.test('123X234');    // 返回True
+        /^(.+)X\1/.test('123X234');     // 返回false ==>这才是期望的结果</code>
     </pre>
     <h3><span class="iconfont jh">&#xe64a;</span>字符串结束/行锚点优化</h3>
     <p><span class="ins">该优化遇到末尾的<span class="reg">$</span>或其他结束锚点的正则表达式时，会从字符串末尾倒数若干字符的位置开始尝试匹配。比如正则表达式<span class="reg">/Achoo(luv)?$/</span>匹配时只能从字符串末尾倒数第9个字符开始匹配。</span></p>

@@ -14,6 +14,7 @@ import Application from 'sp/er/application/Application'
 import Transmission from 'sp/er/transmission/Transmission'
 import Itself from 'sp/er/itself/Itself'
 import Faster from 'sp/er/faster/Faster'
+import Loop from 'sp/er/loop/Loop'
 
 Vue.use(Router)
 
@@ -95,6 +96,11 @@ const router = new Router({
         name: 'Faster',
         meta: {title: '提高表达式速度 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
         component: Faster
+      }, {
+        path: 'loop',
+        name: 'Loop',
+        meta: {title: '消除表达式循环 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Loop
       }]
     }
   ],

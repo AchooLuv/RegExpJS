@@ -49,8 +49,8 @@ export default {
   span.reg{
     padding: 0 .1rem;
     border-radius: .05rem;
-    color: rgb(87, 238, 94);
-    background: rgb(130, 138, 127);
+    color: rgb(0, 243, 170);
+    background: rgb(70, 68, 68);
     overflow: hidden;
   }
 }
