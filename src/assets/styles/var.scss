@@ -119,12 +119,12 @@ $txt-color:rgb(104, 103, 103);
   .divp {
     margin-bottom: .6rem;
     p {
-      font-size: .35rem;
+      font-size: 0.3rem;
+      color: rgb(136, 141, 124);
+      letter-spacing: 1px;
       font-weight: 100;
       line-height: 1.5;
-      text-indent: 0.77rem;
-      letter-spacing: 2px;
-      color:rgb(78, 120, 124);
+      text-indent: 0.65rem;
       &:nth-of-type(1) {
         text-indent: 0;
       }
@@ -148,6 +148,7 @@ $txt-color:rgb(104, 103, 103);
 @mixin tip {
   @include con;
   @include h1p;
+  margin-bottom: .5rem;
   ul {
     li{
       color: rgb(201, 204, 0);
@@ -187,8 +188,8 @@ $txt-color:rgb(104, 103, 103);
   span.reg{
     padding: 0 .1rem;
     border-radius: .05rem;
-    color: rgb(0, 243, 170);
-    background: rgb(77, 75, 75);
+    color: rgb(2, 3, 80);
+    background: rgb(214, 214, 214);
     letter-spacing: 1px;
     overflow: hidden;
   }

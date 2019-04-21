@@ -78,58 +78,22 @@ export default {
               td: '(?>char)'
             }, {
               id: 4010402,
-              td: '固化分组'
+              td: '固化分组（暂不支持）'
             }, {
               id: 4010403,
-              td: '匹配char，但不捕获该结果'
+              td: '匹配char，且不“交还”还分组里的任何字符'
             }]
           }, {
             id: 40105,
             tr: [{
               id: 4010501,
-              td: '(?&lt;Name>)'
+              td: '(?&lt;name>)'
             }, {
               id: 4010502,
               td: '命名捕获'
             }, {
               id: 4010503,
-              td: '匹配char，但不捕获该结果'
-            }]
-          }, {
-            id: 40106,
-            tr: [{
-              id: 4010601,
-              td: '(?:modifier)'
-            }, {
-              id: 4010602,
-              td: '模式修饰符'
-            }, {
-              id: 4010603,
-              td: '匹配char，但不捕获该结果'
-            }]
-          }, {
-            id: 40107,
-            tr: [{
-              id: 4010701,
-              td: '(?modifier:)'
-            }, {
-              id: 4010702,
-              td: '模式作用范围'
-            }, {
-              id: 4010703,
-              td: '匹配char，但不捕获该结果'
-            }]
-          }, {
-            id: 40108,
-            tr: [{
-              id: 4010801,
-              td: '(?if  then  |else)'
-            }, {
-              id: 4010802,
-              td: '模式修饰符'
-            }, {
-              id: 4010803,
-              td: '匹配char，但不捕获该结果'
+              td: '命名捕获分组内容，并通过name调用捕获内容'
             }]
           }]
         }],
@@ -138,7 +102,7 @@ export default {
           con: '<span style="color:red">注：</span><span style="color:red">char </span>为要匹配的字符串或表达式；'
         }, {
           id: 403,
-          con: '<span style="color:red">modifier </span>为模式修饰符字母。'
+          con: '<span style="color:red">name </span>为合法的JavaScript标识符，描述了捕获的内容；'
         }],
         codes: [{
           id: 40401,
@@ -181,6 +145,18 @@ export default {
         result = text.match(regexp);
     console.log(result);   // 匹配结果为: ["AchooLuv", "Luv"]
     console.log(RegExp.$1);    // 输出结果为: Luv`
+        }, {
+          id: 40404,
+          tit: '元字符<span style="color:red">  (?&lt;name&gt;) </span>实例:',
+          code: `    //本实例使用的JS正则语法声明 var regexp = /pattern/flags;  
+                   
+    //命名捕获是ES9才正式支持的正则新特性
+    const XJ = /(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-9]{2})-(?&lt;day&gt;[0-9]{2})/;
+    //使用ES6解构语法更为简便
+    const {groups: {year,day,month}} = XJ.exec('1995-05-26');
+    console.log(year);    // 1995
+    console.log(month);   // 05
+    console.log(day);   // 26`
         }]
       }]
     }

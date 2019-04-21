@@ -90,7 +90,20 @@ export default {
       }, {
         id: 2,
         name: '匹配原理',
-        path: '/mp'
+        path: '/mp',
+        ul: [{
+          id: 1,
+          name: '正则引擎介绍',
+          anchor: '/mp/engines'
+        }, {
+          id: 2,
+          name: '引擎匹配的规则',
+          anchor: '/mp/rules'
+        }, {
+          id: 3,
+          name: 'NFA引擎与回溯',
+          anchor: '/mp/recall'
+        }]
       }, {
         id: 3,
         name: '高效正则',

@@ -95,10 +95,10 @@ export default {
         result = regexp .exec('AchooLuv');
     console.log(result[0]);   // 匹配结果为: A
 
-    //再看一个例子,这个结果是不是出乎意料(你猜测的结果是不是: AchLuv)  ?
+    //再看一个例子
     var regexp1 = /.{3}Luv/,
         result1 = regexp1.exec('AchooLuv');
-    console.log(result1[0]);    // 匹配结果为: hooLuv  至于为什么会是这个结果,将会在匹配原理中解答!
+    console.log(result1[0]);    // 匹配结果为: hooLuv
     
     //在字符组内部 - - - 被正则引擎视为普通字符
     var regexp2 = /[.]/,   // 被视为普通字符 .

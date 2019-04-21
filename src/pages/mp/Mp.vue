@@ -1,12 +1,10 @@
 <template>
   <div class="mc-con">
       <h1>匹配原理</h1>
-      <p>
-        该部分内容会先集中介绍元字符本身及其作用，在稍后的内容中出现的正则表达式都将使用<span>JavaScript</span>作为载体来详细的讲解如何使用这些元字符,以及一些需要注意的地方（比如它们之间的运算优先级关系）;
-        下面涉及到的<span>JavaScript RegExp</span>方法有不清楚的可查阅以下对应的资料:
+      <p>该部分主要从正则引擎的分类介绍、正则引擎的匹配规则、传统型NFA和回溯算法在正则中的应用原理这三方面来讲解正则表达式的匹配原理！
       </p>
       <keep-alive>
-        <router-view class="animated slideInUp"></router-view>
+        <router-view class="animated fadeInUp"></router-view>
       </keep-alive>
   </div>
 </template>

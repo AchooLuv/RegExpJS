@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from 'sp/Home'
+
 import Mc from 'sp/mc/Mc'
 import Counter from 'sp/mc/counter/Counter'
 import Location from 'sp/mc/location/Location'
@@ -8,7 +9,12 @@ import Single from 'sp/mc/single/Single'
 import Advance from 'sp/mc/advance/Advance'
 import Other from 'sp/mc/other/Other'
 import Priority from 'sp/mc/priority/Priority'
+
 import Mp from 'sp/mp/Mp'
+import Engines from 'sp/mp/engines/Engines'
+import Rules from 'sp/mp/rules/Rules'
+import Recall from 'sp/mp/recall/Recall'
+
 import Er from 'sp/er/Er'
 import Application from 'sp/er/application/Application'
 import Transmission from 'sp/er/transmission/Transmission'
@@ -68,8 +74,25 @@ const router = new Router({
     }, {
       path: '/mp',
       name: 'Mp',
+      redirect: '/mp/engines',
       meta: {title: '匹配原理 - RegExpJS - Crafted by AchooLuv'},
-      component: Mp
+      component: Mp,
+      children: [{
+        path: 'engines',
+        name: 'Engines',
+        meta: {title: '正则引擎介绍 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Engines
+      }, {
+        path: 'rules',
+        name: 'Rules',
+        meta: {title: '引擎的匹配规则 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Rules
+      }, {
+        path: 'recall',
+        name: 'Recall',
+        meta: {title: 'NFA引擎与回溯 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
+        component: Recall
+      }]
     }, {
       path: '/er',
       name: 'Er',
