@@ -132,7 +132,7 @@ export default {
       }, {
         id: 4,
         name: '社区讨论',
-        path: ''
+        path: '/'
       }]
     }
   }
