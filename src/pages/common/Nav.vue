@@ -14,6 +14,7 @@
           </ul>
         </li>
       </ul>
+      <a class="com-disc" href="http://localhost:1234">社区讨论</a>
       <div class="info">
         <p>
           Crafted by
@@ -39,13 +40,7 @@
             </ul>
           </li>
         </ul>
-        <div class="info">
-          <p>
-            Crafted by
-            <a href='https://github.com/AchooLuv' target="_blank">AchooLuv</a>
-          </p>
-          <p>备案号: 蜀ICP备18019865号</p>
-        </div>
+        <router-link class="home" to='localhost:1234'>社区讨论</router-link>
       </nav>
     </transition>
   </div>
@@ -129,10 +124,6 @@ export default {
           name: '消除表达式循环',
           anchor: '/er/loop'
         }]
-      }, {
-        id: 4,
-        name: '社区讨论',
-        path: '/'
       }]
     }
   }

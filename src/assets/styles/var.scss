@@ -82,6 +82,13 @@ $txt-color:rgb(104, 103, 103);
       }
     }
   }
+  .com-disc{
+    display: block;
+    margin: .3rem 0 0 .5rem;
+    font-size: .35rem;
+    color: $nav-color;
+    letter-spacing: 2px;
+  }
   .info {
     position: absolute;
     left: 0;
