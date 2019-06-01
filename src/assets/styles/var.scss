@@ -53,6 +53,7 @@ $txt-color:rgb(104, 103, 103);
   background: rgb(255, 255, 255);
   box-sizing: border-box;
   border-right: .2rem solid rgb(189, 189, 189);
+  z-index: 10;
   .home {
     display: block;
     @include thc(1rem);

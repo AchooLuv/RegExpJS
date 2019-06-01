@@ -14,7 +14,7 @@
           </ul>
         </li>
       </ul>
-      <a class="com-disc" href="http://localhost:1234">社区讨论</a>
+      <a class="com-disc" href="javascript:;">社区讨论</a>
       <div class="info">
         <p>
           Crafted by
@@ -40,7 +40,7 @@
             </ul>
           </li>
         </ul>
-        <router-link class="home" to='localhost:1234'>社区讨论</router-link>
+        <a class="com-disc" href="javascript:;">社区讨论</a>
       </nav>
     </transition>
   </div>
@@ -75,7 +75,7 @@ export default {
           anchor: '/mc/advance'
         }, {
           id: 5,
-          name: '其他类型',
+          name: '其它类型',
           anchor: '/mc/other'
         }, {
           id: 6,
@@ -164,6 +164,7 @@ export default {
     font-size: .55rem;
     cursor: pointer;
     color: $nav-colors;
+    z-index: 9;
   }
 }
 </style>
