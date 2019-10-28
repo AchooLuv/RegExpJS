@@ -53,8 +53,8 @@ export default {
 }
 </script>
 
- <style lang='scss' scoped>
- @import 'sa/styles/var.scss';
+<style lang='scss' scoped>
+@import 'sa/styles/var.scss';
 .top {
   z-index: 5;
   position: fixed;

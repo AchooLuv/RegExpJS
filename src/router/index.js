@@ -17,38 +17,38 @@ const router = new Router({
       name: 'Mc',
       redirect: '/mc/counter',
       meta: {title: '元字符 - RegExpJS - Crafted by AchooLuv'},
-      component: () => import('sp/mc/Mc'),
+      component: () => import('smc/Mc'),
       children: [
         {
           path: 'counter',
           name: 'Counter',
           meta: {title: '计数功能型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
-          component: () => import('sp/mc/counter/Counter')
+          component: () => import('smc/counter/Counter')
         }, {
           path: 'location',
           name: 'Location',
           meta: {title: '匹配位置型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
-          component: () => import('sp/mc/location/Location')
+          component: () => import('smc/location/Location')
         }, {
           path: 'single',
           name: 'Single',
           meta: {title: '匹配单个字符型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
-          component: () => import('sp/mc/single/Single')
+          component: () => import('smc/single/Single')
         }, {
           path: 'advance',
           name: 'Advance',
           meta: {title: '进阶型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
-          component: () => import('sp/mc/advance/Advance')
+          component: () => import('smc/advance/Advance')
         }, {
           path: 'other',
           name: 'Other',
           meta: {title: '其它类型元字符 - 元字符 - RegExpJS - Crafted by AchooLuv'},
-          component: () => import('sp/mc/other/Other')
+          component: () => import('smc/other/Other')
         }, {
           path: 'priority',
           name: 'Priority',
           meta: {title: '元字符运算优先级 - 元字符 - RegExpJS - Crafted by AchooLuv'},
-          component: () => import('sp/mc/priority/Priority')
+          component: () => import('smc/priority/Priority')
         }
       ]
     }, {
@@ -56,54 +56,54 @@ const router = new Router({
       name: 'Mp',
       redirect: '/mp/engines',
       meta: {title: '匹配原理 - RegExpJS - Crafted by AchooLuv'},
-      component: () => import('sp/mp/Mp'),
+      component: () => import('smp/Mp'),
       children: [{
         path: 'engines',
         name: 'Engines',
         meta: {title: '正则引擎介绍 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/mp/engines/Engines')
+        component: () => import('smp/engines/Engines')
       }, {
         path: 'rules',
         name: 'Rules',
         meta: {title: '引擎的匹配规则 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/mp/rules/Rules')
+        component: () => import('smp/rules/Rules')
       }, {
         path: 'recall',
         name: 'Recall',
         meta: {title: 'NFA引擎与回溯 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/mp/recall/Recall')
+        component: () => import('smp/recall/Recall')
       }]
     }, {
       path: '/er',
       name: 'Er',
       redirect: '/er/application',
       meta: {title: '高效正则 - RegExpJS - Crafted by AchooLuv'},
-      component: () => import('sp/er/Er'),
+      component: () => import('ser/Er'),
       children: [{
         path: 'application',
         name: 'Application',
         meta: {title: '正则应用原理 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/er/application/Application')
+        component: () => import('ser/application/Application')
       }, {
         path: 'transmission',
         name: 'Transmission',
         meta: {title: '传动装置优化 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/er/transmission/Transmission')
+        component: () => import('ser/transmission/Transmission')
       }, {
         path: 'itself',
         name: 'Itself',
         meta: {title: '表达式本身优化 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/er/itself/Itself')
+        component: () => import('ser/itself/Itself')
       }, {
         path: 'faster',
         name: 'Faster',
         meta: {title: '提高表达式速度 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/er/faster/Faster')
+        component: () => import('ser/faster/Faster')
       }, {
         path: 'loop',
         name: 'Loop',
         meta: {title: '消除表达式循环 - 高效正则 - RegExpJS - Crafted by AchooLuv'},
-        component: () => import('sp/er/loop/Loop')
+        component: () => import('ser/loop/Loop')
       }]
     }
   ],

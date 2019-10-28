@@ -14,7 +14,7 @@
           </ul>
         </li>
       </ul>
-      <a class="com-disc" href="javascript:;">社区讨论</a>
+      <a class="com-disc" href="https://7orz.me">作者博客</a>
       <div class="info">
         <p>
           Crafted by
@@ -40,7 +40,7 @@
             </ul>
           </li>
         </ul>
-        <a class="com-disc" href="javascript:;">社区讨论</a>
+        <a class="com-disc" href="https://7orz.me">作者博客</a>
       </nav>
     </transition>
   </div>
